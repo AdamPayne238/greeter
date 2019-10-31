@@ -1,6 +1,6 @@
 const express = require('express');
 
-const server = express(); // creating an instance of an express server...
+const server = express(); // creating an instance of an express server....
 
 server.get('/', (req, res) => {
   res.status(200).json({ hello: 'Web 23' });
