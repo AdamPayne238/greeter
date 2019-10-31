@@ -6,6 +6,11 @@ server.get('/', (req, res) => {
   res.status(200).json({ hello: 'Web 23' });
 });
 
-server.listen(4000, () => {
-  console.log('\n Server running on port 4000 \n');
+// The port is coming from the environment 
+const port = process.env.PORT || 2000;
+
+console.log("port", port);
+
+server.listen(port, () => {
+  console.log(` Server running on port ${port} `);
 });
