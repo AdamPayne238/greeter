@@ -7,7 +7,8 @@ const server = express(); // creating an instance of an express server....
 console.log('message:', process.env.MSG);
 
 server.get('/', (req, res) => {
-  res.status(200).json({ hello: 'Web 23' });
+  res.send(process.env.MSG);
+  res.status(200).json({hello: 'Web 23' });
 });
 
 // The port is coming from the environment 
